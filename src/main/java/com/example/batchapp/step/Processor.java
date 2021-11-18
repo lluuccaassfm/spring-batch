@@ -1,0 +1,12 @@
+package com.example.batchapp.step;
+
+
+import org.springframework.batch.item.ItemProcessor;
+
+public class Processor implements ItemProcessor<String, String> {
+
+    @Override
+    public String process(String message) throws Exception {
+        return message.toUpperCase();
+    }
+}
